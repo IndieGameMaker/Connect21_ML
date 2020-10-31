@@ -71,5 +71,19 @@ public class MummyAgent : Agent
         actionsOut[1] = Input.GetAxis("Horizontal");
     }
 
+    void OnCollisionEnter(Collision coll)
+    {
+        if (coll.collider.CompareTag("DEAD_ZONE"))
+        {
+            SetReward(-1.0f);
+            EndEpisode();
+        }
+
+        if (coll.collider.CompareTag("TARGET"))
+        {
+            SetReward(+1.0f);
+            EndEpisode();
+        }
+    }
 
 }
