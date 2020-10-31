@@ -81,15 +81,24 @@ public class MummyAgent : Agent
     {
         if (coll.collider.CompareTag("DEAD_ZONE"))
         {
+            StartCoroutine(this.ChangeMaterial(badMt));
             SetReward(-1.0f);
             EndEpisode();
         }
 
         if (coll.collider.CompareTag("TARGET"))
         {
+            StartCoroutine(this.ChangeMaterial(goodMt));
             SetReward(+1.0f);
             EndEpisode();
         }
+    }
+
+    IEnumerator ChangeMaterial(Material changeMt)
+    {
+        floorRd.material = changeMt;
+        yield return new WaitForSeconds(0.2f);
+        floorRd.material = originMt;
     }
 
 }

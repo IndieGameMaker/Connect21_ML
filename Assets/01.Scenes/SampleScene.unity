@@ -854,7 +854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400070, guid: 3353e4f866c39d043a315b41717c9bb7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 400070, guid: 3353e4f866c39d043a315b41717c9bb7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400070, guid: 3353e4f866c39d043a315b41717c9bb7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.14
+      value: -0.48
       objectReference: {fileID: 0}
     - target: {fileID: 400070, guid: 3353e4f866c39d043a315b41717c9bb7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -959,6 +959,9 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 1000
   targetTr: {fileID: 373893503}
+  floorRd: {fileID: 409655549}
+  goodMt: {fileID: 2100000, guid: b59bf246b19f841adb87f982d235becf, type: 2}
+  badMt: {fileID: 2100000, guid: 6f5f0077b863c4df689fda6fb35ee4c9, type: 2}
 --- !u!114 &1392661698
 MonoBehaviour:
   m_ObjectHideFlags: 0
