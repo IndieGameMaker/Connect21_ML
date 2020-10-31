@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 
@@ -25,7 +26,12 @@ public class MummyAgent : Agent
     //학습(Episode)이 시작될 때 마다
     public override void OnEpisodeBegin()
     {
+        //Rigidbody의 속도와 회전을 초기화
         rb.velocity = rb.angularVelocity = Vector3.zero;
+        //Target, Agent의 위치를 불규칙하게 변경
+        tr.localPosition = new Vector3(Random.Range(-4.0f, 4.0f)
+                                      ,0.05f
+                                      ,Random.Range(-4.0f, 4.0f));
     }
 
     //주변 환경을 관측해서 머신러닝 알고리즘(TF)로 전달하는 역학
