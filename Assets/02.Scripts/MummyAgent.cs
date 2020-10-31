@@ -11,10 +11,15 @@ using Unity.MLAgents.Sensors;
 */
 public class MummyAgent : Agent
 {
+    private Transform tr;
+    private Rigidbody rb;
+    public Transform targetTr;
+
     //에이젼트 초기화 함수
     public override void Initialize()
     {
-
+        tr = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody>();
     }
 
     //학습(Episode)이 시작될 때 마다
@@ -35,7 +40,7 @@ public class MummyAgent : Agent
 
     }
 
-    
+
     public override void Heuristic(float[] actionsOut)
     {
 
