@@ -25,7 +25,7 @@ public class MummyAgent : Agent
     //학습(Episode)이 시작될 때 마다
     public override void OnEpisodeBegin()
     {
-
+        rb.velocity = rb.angularVelocity = Vector3.zero;
     }
 
     //주변 환경을 관측해서 머신러닝 알고리즘(TF)로 전달하는 역학
