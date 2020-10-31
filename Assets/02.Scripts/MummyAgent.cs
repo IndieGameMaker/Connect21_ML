@@ -56,7 +56,7 @@ public class MummyAgent : Agent
     //브레인으로 부터 전달 받은 데이터 대로 행동을 취하는 함수
     public override void OnActionReceived(float[] vectorAction)
     {
-        Debug.Log($"[0]={vectorAction[0]} / [1]={vectorAction[1]}");
+        //Debug.Log($"[0]={vectorAction[0]} / [1]={vectorAction[1]}");
         float v = Mathf.Clamp(vectorAction[0], -1.0f, 1.0f);
         float h = Mathf.Clamp(vectorAction[1], -1.0f, 1.0f);
 

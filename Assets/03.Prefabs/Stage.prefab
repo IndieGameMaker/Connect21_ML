@@ -626,7 +626,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 1000
+  MaxStep: 2000
   targetTr: {fileID: 1035720671566177848}
   floorRd: {fileID: 1035720671463266234}
   goodMt: {fileID: 2100000, guid: b59bf246b19f841adb87f982d235becf, type: 2}
