@@ -64,7 +64,7 @@ public class MummyAgent : Agent
         rb.AddForce(dir.normalized * 30.0f);
 
         //지속적인 이동을 위해 마이너스 페널티를 줌(빨리 목적지에 도달할수록 좋다.)
-        AddReward(-0.001f);
+        SetReward(-0.001f);
     }
 
 
