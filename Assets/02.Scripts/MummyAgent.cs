@@ -32,6 +32,10 @@ public class MummyAgent : Agent
         tr.localPosition = new Vector3(Random.Range(-4.0f, 4.0f)
                                       ,0.05f
                                       ,Random.Range(-4.0f, 4.0f));
+
+        targetTr.localPosition = new Vector3(Random.Range(-4.0f, 4.0f)
+                                            ,0.55f
+                                            ,Random.Range(-4.0f, 4.0f));
     }
 
     //주변 환경을 관측해서 머신러닝 알고리즘(TF)로 전달하는 역학
