@@ -15,6 +15,11 @@ public class MummyAgent : Agent
     private Transform tr;
     private Rigidbody rb;
     public Transform targetTr;
+    
+    public Renderer floorRd;
+    public Material goodMt;
+    public Material badMt;
+    private Material originMt;
 
     //에이젼트 초기화 함수
     public override void Initialize()
