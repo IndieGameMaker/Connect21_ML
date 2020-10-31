@@ -53,10 +53,11 @@ public class MummyAgent : Agent
         Debug.Log($"[0]={vectorAction[0]} / [1]={vectorAction[1]}");
         float v = Mathf.Clamp(vectorAction[0], -1.0f, 1.0f);
         float h = Mathf.Clamp(vectorAction[1], -1.0f, 1.0f);
+
         Vector3 dir = (Vector3.forward * v) + (Vector3.right * h);
         rb.AddForce(dir.normalized * 30.0f);
 
-        
+        AddReward(-0.001f);
     }
 
 
