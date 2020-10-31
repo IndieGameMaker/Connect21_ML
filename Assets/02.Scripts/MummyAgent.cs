@@ -26,6 +26,7 @@ public class MummyAgent : Agent
     {
         tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
+        originMt = floorRd.material;
     }
 
     //학습(Episode)이 시작될 때 마다
