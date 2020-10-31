@@ -50,13 +50,17 @@ public class MummyAgent : Agent
     //브레인으로 부터 전달 받은 데이터 대로 행동을 취하는 함수
     public override void OnActionReceived(float[] vectorAction)
     {
-
+        Debug.Log($"[0]={vectorAction[0]} / [1]={vectorAction[1]}");
     }
 
 
+    //테스트
     public override void Heuristic(float[] actionsOut)
     {
-
+        //전/후진
+        actionsOut[0] = Input.GetAxis("Vertical");
+        //좌/우
+        actionsOut[1] = Input.GetAxis("Horizontal");
     }
 
 
