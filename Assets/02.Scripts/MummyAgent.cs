@@ -41,7 +41,10 @@ public class MummyAgent : Agent
     //주변 환경을 관측해서 머신러닝 알고리즘(TF)로 전달하는 역학
     public override void CollectObservations(VectorSensor sensor)
     {
-
+        sensor.AddObservation(targetTr.localPosition);  //3
+        sensor.AddObservation(tr.localPosition);        //3
+        sensor.AddObservation(rb.velocity.x);           //1
+        sensor.AddObservation(rb.velocity.z);           //1
     }
 
     //브레인으로 부터 전달 받은 데이터 대로 행동을 취하는 함수
